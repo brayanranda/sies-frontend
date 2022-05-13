@@ -1,3 +1,10 @@
 .swiper-pagination-bullet-active {
     background-color: white !important;
 }
+.bg-black-slider {
+    background: #000;
+    background: linear-gradient(-90deg,#000 65%,transparent);
+}
+@media (max-width: 767px) {
+    .bg-black-slider {background: linear-gradient(0deg, rgba(0,0,0,1) 16%, rgba(0,0,0,0) 100%);}
+}
