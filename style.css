@@ -8,3 +8,97 @@
 @media (max-width: 767px) {
     .bg-black-slider {background: linear-gradient(0deg, rgba(0,0,0,1) 16%, rgba(0,0,0,0) 100%);}
 }
+
+footer{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #D3C9E1;
+}
+
+footer .first-section{
+    width: 100%;
+    height: 100%;
+    padding: 25px 50px;
+    background-color: #151718;
+}
+
+footer .logo-social{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer .social{
+    display:grid;
+    text-align: right;
+} 
+
+footer .social a{
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer .social a:hover{
+    opacity: 0.8;
+}
+footer .logo{
+    padding-bottom: 15px;
+}
+
+footer .logo img{
+    height: 40px;
+    width: 100px;
+}
+footer .links{
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    
+}
+
+footer .links span{
+    font-size: 17px;
+}
+
+
+footer .lista li{
+    display: inline-block;
+    font-size: 13px;
+    padding: 0 15px;
+}
+
+footer .lista li a{
+    text-decoration: none;
+}
+
+footer .lista li a i{
+    text-decoration: none;
+    font-size: 11px;
+}
+
+footer .second-section img{
+    width: 100px;
+}
+
+footer .second-section{
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    background-color: black;
+    text-align: center;
+}
+
+footer .second-section span{
+    font-size: 13px;
+    font-weight: bold;
+}
