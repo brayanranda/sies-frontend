@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido SIES+</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header class="w-full">
+        <nav class="w-4/5 mx-auto flex items-center justify-between py-3">
+            <img class="w-36" src="images/LogoGeneral.png" alt="logo">
+            <ul class="flex items-center">
+                <li class="text-indigo-800 ml-10">
+                    Eventos
+                </li>
+                <li class="text-indigo-800 ml-10">
+                    Noticias
+                </li>
+                <li class="text-indigo-800 ml-10">
+                    Mesas
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="bg-orange-600 w-full relative">
+        <article class="swiper mySwiper w-4/5 mx-auto py-12">
+            <div id="participants" class="swiper-wrapper w-full">
+            </div>
+        </article>
+        <div class="swiper-button-next text-white"></div>
+        <div class="swiper-button-prev text-white"></div>
+        <div class="swiper-pagination text-white"></div>
+    </section>
+    <footer></footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="participants.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 6,
+            spaceBetween: 40,
+            slidesPerGroup: 6,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
