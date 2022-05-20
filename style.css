@@ -9,6 +9,11 @@
     .bg-black-slider {background: linear-gradient(0deg, rgba(0,0,0,1) 16%, rgba(0,0,0,0) 100%);}
 }
 
+.boton-cargar{
+background-color: #ffa500;
+color: #ffffff;
+border-radius: 5%;
+}
 footer{
     margin: 0;
     padding: 0;
