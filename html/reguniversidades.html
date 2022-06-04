@@ -22,10 +22,6 @@
 </head>
 
 <body>
-    <!-- <header class="w-full py-2 bg-black">
-        <nav class="w-3/4 mx-auto">
-        </nav>
-    </header> -->
     <main class="mx-auto w-10/12 lg:w-3/4 my-10">
         <section class="w-full md:flex justify-between">
             <article class="w-full md:w-1/4">
@@ -33,26 +29,28 @@
                     <img class="w-32 mx-auto py-5" src="../images/LogoGeneralBlanco.png" alt="">
                 </div>
                 <div class="flex md:block">
-                    <div class="w-1/2 md:w-full grid p-10 grid-cols-2 bg-slate-900 rounded-3xl gap-3 relative top-0 left-0">
+                    <div data-aos="zoom-in"
+                        class="w-1/2 md:w-full grid p-10 grid-cols-2 bg-slate-900 rounded-3xl gap-3 relative top-0 left-0">
                         <a class="rounded-xl h-20 flex text-white items-center justify-center bg-slate-700 hover:bg-slate-500 transform hover:scale-110 hover:-rotate-3 duration-300"
-                            href="">
+                            href="regevento.html">
                             <i class="fa-solid text-2xl fa-calendar-check"></i>
                         </a>
-                        <a class="rounded-xl h-20 flex text-white items-center justify-center bg-slate-700 hover:bg-slate-500 transform hover:scale-110 hover:rotate-3 duration-300"
-                            href="">
+                        <a class="rounded-xl h-20 flex text-white items-center justify-center bg-orange-600 hover:scale-95 duration-300"
+                            href="reguniversidades.html">
                             <i class="fa-solid text-2xl fa-school"></i>
                         </a>
                         <a class="rounded-xl h-20 flex text-white items-center justify-center bg-slate-700 hover:bg-slate-500 transform hover:scale-110 hover:rotate-3 duration-300"
-                            href="">
+                            href="regmesas.html">
                             <i class="fa-solid text-2xl fa-table-cells-large"></i>
                         </a>
                         <a class="rounded-xl h-20 flex text-white items-center justify-center bg-slate-700 hover:bg-slate-500 transform hover:scale-110 hover:-rotate-3 duration-300"
-                            href="">
+                            href="regnoticia.html">
                             <i class="fa-solid text-2xl fa-newspaper"></i>
                         </a>
                     </div>
-                    <a class="w-1/2 md:w-full flex justify-center text-white w-full py-3 mt-6 rounded-3xl transform hover:scale-95 duration-300 bg-black"
-                    href="">
+                    <a data-aos="zoom-in"
+                        class="w-1/2 md:w-full flex justify-center text-white w-full py-3 mt-6 rounded-3xl transform hover:scale-95 duration-300 bg-black"
+                        href="">
                         Cerrar sesión
                     </a>
                 </div>
@@ -60,56 +58,49 @@
             <article class="w-full md:w-3/4 bg-gray-100 md:ml-6 rounded-3xl py-12 px-12">
                 <div class="flex items-center justify-between mb-10">
                     <h1 class="text-xl font-semibold">Universidades</h1>
-                    <button type="button" class="py-2 px-4 bg-orange-600 text-white rounded-xl transform hover:scale-105 duration-300 hover:bg-black">Agregar eventos</button>
+                    <button data-aos="zoom-in" type="button"
+                        class="py-2 px-4 bg-orange-600 text-white rounded-xl transform hover:scale-105 duration-300 hover:bg-black">Agregar
+                        universidad</button>
                 </div>
                 <form class="w-full" action="">
-                    <label class="mb-6 flex flex-col w-full" for="nameuser">
-                        <p class="ml-2 mb-1">Nombre de usuario</p>
-                        <input id="nameuser" class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl" type="text">
+                    <label data-aos="zoom-in" class="mb-6 flex flex-col w-full" for="nameuser">
+                        <p class="ml-2 mb-1">Nombre</p>
+                        <input id="nameuser"
+                            class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
+                            type="text">
+                    </label>
+                    <label data-aos="zoom-in" class="mb-6 flex flex-col w-full" for="nameuser">
+                        <p class="ml-2 mb-1">Información</p>
+                        <textarea
+                            class="resize-none h-20 placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
+                            name="" id=""></textarea>
                     </label>
                     <div class="mb-6 flex items-center justify-center">
-                        <label class="w-1/2 mr-1" for="startdate">
-                            <p class="ml-2 mb-1">Fecha inicio</p>
-                            <input class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl" type="date">
+                        <label data-aos="zoom-in" class="w-1/2 mr-1" for="">
+                            <p class="ml-2 mb-1">Ciudad</p>
+                            <input
+                                class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
+                                type="text">
                         </label>
-                        <label class="w-1/2 ml-1" for="enddate">
-                            <p class="ml-2 mb-1">Fecha finalización</p>
-                            <input class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl" type="date">
-                        </label>
-                    </div>
-                    <label class="mb-6 flex flex-col w-full" for="nameuser">
-                        <p class="ml-2 mb-1">Descripción</p>
-                        <textarea class="resize-none h-20 placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl" name="" id=""></textarea>
-                    </label>
-                    <div class="mb-6 flex items-center justify-center">
-                        <label class="w-1/2 mr-1" for="">
-                            <p class="ml-2 mb-1">Lugar</p>
-                            <input class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl" type="text">
-                        </label>
-                        <label class="w-1/2 ml-1" for="">
+                        <label data-aos="zoom-in" class="w-1/2 ml-1" for="">
                             <p class="ml-2 mb-1">Responsable</p>
-                            <input class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl" type="text">
+                            <input
+                                class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
+                                type="text">
                         </label>
                     </div>
-                    <div class="mb-6 flex items-center justify-center">
-                        <label class="w-1/2 mr-1" for="">
-                            <p class="ml-2 mb-1">Contacto</p>
-                            <input class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl" type="text">
-                        </label>
-                        <label class="w-1/2 ml-1" for="">
-                            <p class="ml-2 mb-1">URL</p>
-                            <input class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl" type="text">
-                        </label>
-                    </div>
-                    <label class="flex flex-col w-1/2 mr-1" for="">
-                        <p class="ml-2 mb-1">Mesa</p>
-                        <input class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl" type="text">
-                    </label>
-                    <button type="button" class="transform hover:scale-105 duration-300 mt-6 py-2 w-1/2 bg-orange-600 text-white rounded-xl">Guardar</button>
+                    <button data-aos="zoom-in" type="button"
+                        class="transform hover:scale-105 duration-300 mt-6 py-2 w-1/2 bg-orange-600 text-white rounded-xl hover:bg-black">Guardar</button>
                 </form>
             </article>
         </section>
     </main>
+    <!-- AOS libreria -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
