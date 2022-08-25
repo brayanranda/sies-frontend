@@ -1,29 +1,19 @@
-const formulario = document.getElementById("reg-noticia");
-
-formulario.addEventListener("submit", (event)=>{
-    event.preventDefault();
-    const formData = new FormData(formulario);
-    const titulo = formData.get("titulo");
-    const descripcion = formData.get("descripcion");
-    const autor = formData.get("autor");
-    const categoria = formData.get("categoria");
-    const mesa_id = formData.get("mesa");
-    fetch("http://localhost:3000/api/noticias",//Remplazar por la url
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": 'application/json',
-        },
-        body: JSON.stringify({
-            titulo,//Obligatorio
-            descripcion,//Obligatorio
-            autor,
-            categoria,
-            mesa_id//Obligatorio
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const body = Object.fromEntries(new FormData(e.target));
+    body.mesa = Number(body.mesa)
+    fetch("http://siesplus.us-east-1.elasticbeanstalk.com/api/noticias", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
         })
-    })
-    .then(data => data.json())
-    .then(data => {
-        if(!data.noticia) alert(data.message)
-    })
+        .then((data) => data.json())
+        .then((data) => {
+            if (!data.mesa) {
+                alert(data.message);
+                window.location.href = `http://127.0.0.1:5501/html/listnoticias.html`
+            }
+        });
 });
