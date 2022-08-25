@@ -14,7 +14,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- AOS libreria -->
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
@@ -27,21 +29,28 @@
                     <img class="w-32 mx-auto py-5" src="../images/LogoGeneralBlanco.png" alt="">
                 </div>
                 <div class="flex md:block">
-                    <div data-aos="zoom-in" class="w-1/2 md:w-full grid p-10 grid-cols-2 bg-slate-900 rounded-3xl gap-3 relative top-0 left-0">
-                        <a class="rounded-xl h-20 flex text-white items-center justify-center bg-slate-700 hover:bg-slate-500 transform hover:scale-110 hover:-rotate-3 duration-300" href="listeventos.html">
+                    <div data-aos="zoom-in"
+                        class="w-1/2 md:w-full grid p-10 grid-cols-2 bg-slate-900 rounded-3xl gap-3 relative top-0 left-0">
+                        <a class="rounded-xl h-20 flex text-white items-center justify-center bg-slate-700 hover:bg-slate-500 transform hover:scale-110 hover:-rotate-3 duration-300"
+                            href="listeventos.html">
                             <i class="fa-solid text-2xl fa-calendar-check"></i>
                         </a>
-                        <a class="rounded-xl h-20 flex text-white items-center justify-center bg-slate-700 hover:bg-slate-500 transform hover:scale-110 hover:-rotate-3 duration-300" href="listuniversidades.html">
+                        <a class="rounded-xl h-20 flex text-white items-center justify-center bg-slate-700 hover:bg-slate-500 transform hover:scale-110 hover:-rotate-3 duration-300"
+                            href="listuniversidades.html">
                             <i class="fa-solid text-2xl fa-school"></i>
                         </a>
-                        <a class="rounded-xl h-20 flex text-white items-center justify-center bg-slate-700 hover:bg-slate-500 transform hover:scale-110 hover:rotate-3 duration-300" href="listmesas.html">
+                        <a class="rounded-xl h-20 flex text-white items-center justify-center bg-slate-700 hover:bg-slate-500 transform hover:scale-110 hover:rotate-3 duration-300"
+                            href="listmesas.html">
                             <i class="fa-solid text-2xl fa-table-cells-large"></i>
                         </a>
-                        <a class="rounded-xl h-20 flex text-white items-center justify-center bg-orange-600 hover:scale-95 duration-300" href="listnoticias.html">
+                        <a class="rounded-xl h-20 flex text-white items-center justify-center bg-orange-600 hover:scale-95 duration-300"
+                            href="listnoticias.html">
                             <i class="fa-solid text-2xl fa-newspaper"></i>
                         </a>
                     </div>
-                    <a data-aos="zoom-in" class="w-1/2 md:w-full flex justify-center text-white w-full py-3 mt-6 rounded-3xl transform hover:scale-95 duration-300 bg-black" href="">
+                    <a data-aos="zoom-in"
+                        class="w-1/2 md:w-full flex justify-center text-white w-full py-3 mt-6 rounded-3xl transform hover:scale-95 duration-300 bg-black"
+                        href="">
                         Cerrar sesión
                     </a>
                 </div>
@@ -49,7 +58,8 @@
             <article class="w-full md:w-3/4 bg-gray-100 md:ml-6 rounded-3xl py-12 px-12">
                 <div class="flex items-center justify-between mb-10">
                     <h1 class="text-xl font-semibold">Noticias</h1>
-                    <button data-aos="zoom-in" type="button" class="py-2 px-4 bg-orange-600 text-white rounded-xl transform hover:scale-105 duration-300 hover:bg-black">Agregar
+                    <button data-aos="zoom-in" type="button"
+                        class="py-2 px-4 bg-orange-600 text-white rounded-xl transform hover:scale-105 duration-300 hover:bg-black">Agregar
                         noticia</button>
                 </div>
                 <form class="w-full" action="">
@@ -74,21 +84,25 @@
                         </label>
                         <label data-aos="zoom-in" class="w-1/2 ml-1" for="">
                             <p class="ml-2 mb-1">Categoria</p>
-                            <input
-                                id="categoria" name="categoria" class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
-                                type="text">
-                        </label>
-                    </div>
-
-                    <div class="mb-6 flex items-center justify-center">
-                        <label data-aos="zoom-in" class="w-1/2 mr-1" for="">
-                            <p class="ml-2 mb-1">Mesa</p>
-                            <input input="mesa_id" name="mesa_id"
+                            <input id="categoria" name="categoria"
                                 class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
                                 type="text">
                         </label>
                     </div>
-                    <button data-aos="zoom-in" type="submit" class="transform hover:scale-105 duration-300 mt-6 py-2 w-1/2 bg-orange-600 text-white rounded-xl hover:bg-black">Guardar</button>
+
+                    <div class="mb-6" id="data-mesas">
+
+                        <p class="ml-2 mb-1">Mesa</p>
+                        <input list="mesa_id"
+                            class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
+                            name="mesa_id" />
+
+                        <datalist id="mesa_id" name="mesa_id" class="">
+
+                        </datalist>
+                    </div>
+                    <button data-aos="zoom-in" type="submit"
+                        class="transform hover:scale-105 duration-300 mt-6 py-2 w-1/2 bg-orange-600 text-white rounded-xl hover:bg-black">Guardar</button>
                 </form>
             </article>
         </section>
