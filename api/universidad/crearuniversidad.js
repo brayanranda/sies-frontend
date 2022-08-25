@@ -1,29 +1,19 @@
-const formulario = document.getElementById("reg-universidad");
-
-formulario.addEventListener("submit", (event)=>{
-    event.preventDefault();
-    const formData = new FormData(formulario);
-    const nombre = formData.get("nombre");
-    const info = formData.get("informacion");
-    const url = formData.get("url");
-    const ciudad = formData.get("ciudad");
-    const responsable = formData.get("responsable");
-    fetch("http://localhost:3000/api/universidades",//Remplazar por la url
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": 'application/json',
-        },
-        body: JSON.stringify({
-            nombre,//Obligatorio
-            logo: url,//Obligatorio
-            responsable,//Obligatorio
-            ciudad,//Obligatorio
-            info
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const body = Object.fromEntries(new FormData(e.target));
+    body.mesa_id = Number(body.mesa_id)
+    fetch("http://siesplus.us-east-1.elasticbeanstalk.com/api/universidades", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
         })
-    })
-    .then(data => data.json())
-    .then(data => {
-        if(!data.universidad) alert(data.message)
-    })
+        .then((data) => data.json())
+        .then((data) => {
+            if (!data.mesa) {
+                alert(data.message);
+                window.location.href = `http://127.0.0.1:5501/html/listuniversidades.html`
+            }
+        });
 });

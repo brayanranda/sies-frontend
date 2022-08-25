@@ -1,38 +1,19 @@
-const formulario = document.getElementById("reg-evento");
-
-formulario.addEventListener("submit", (event)=>{
-    event.preventDefault();
-    const formData = new FormData(formulario);
-
-    const nombre = formData.get("nombre");
-    const fechaInicio = formData.get("fecha-inicio");
-    const fechaFin = formData.get("fecha-fin");
-    const responsable = formData.get("responsable");
-    const descripcion = formData.get("descripcion");
-    const contacto = formData.get("contacto");
-    const lugar = formData.get("lugar");
-    const url = formData.get("url");
-    const mesa_id = formData.get("mesa");
-    fetch("http://localhost:3000/api/eventos",//Remplazar por la url
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": 'application/json',
-        },
-        body: JSON.stringify({
-            nombre,//Obligatorio
-            fechaInicio,//Obligatorio
-            fechaFin,
-            descripcion,
-            lugar,
-            responsable,//Obligatorio
-            contacto,//Obligatorio
-            url,
-            mesa_id//Obligatorio
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const body = Object.fromEntries(new FormData(e.target));
+    body.mesa_id = Number(body.mesa_id)
+    fetch("http://siesplus.us-east-1.elasticbeanstalk.com/api/eventos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
         })
-    })
-    .then(data => data.json())//Este no retorna un mensaje si se crea el evento, solo retorna el objeto creado. Despues lo arreglo
-    .then(data => {
-        if(!data.noticia) alert(data.message)
-    })
+        .then((data) => data.json())
+        .then((data) => {
+            if (!data.mesa) {
+                alert(data.message);
+                window.location.href = `http://127.0.0.1:5501/html/listeventos.html`
+            }
+        });
 });

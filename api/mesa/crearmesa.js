@@ -1,27 +1,16 @@
-const formulario = document.getElementById("reg-mesa");
-
-formulario.addEventListener("submit", (event)=>{
-    event.preventDefault();
-    const formData = new FormData(formulario);
-    const nombre = formData.get("nombre");
-    const correo = formData.get("correo");
-    const descripcion = formData.get("descripcion");
-    const universidad_id = formData.get("universidad");
-    fetch("http://localhost:3000/api/mesas",//Remplazar por la url
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": 'application/json',
-        },
-        body: JSON.stringify({
-            nombre,//Obligatorio
-            correo,//Obligatorio
-            descripcion,
-            universidad_id//Obligatorio
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const body = Object.fromEntries(new FormData(e.target));
+    fetch("http://siesplus.us-east-1.elasticbeanstalk.com/api/mesas", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
         })
-    })
-    .then(data => data.json())
-    .then(data => {
-        if(!data.mesa) alert(data.message)
-    })
+        .then((data) => data.json())
+        .then((data) => {
+            if (!data.mesa) alert(data.message);
+            else window.location.href = `http://127.0.0.1:5501/html/listmesas.html`
+        });
 });

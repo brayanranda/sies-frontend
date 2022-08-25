@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -60,7 +60,7 @@
                 <form class="w-full" action="">
                     <label data-aos="zoom-in" class="mb-6 flex flex-col w-full" for="nameuser">
                         <p class="ml-2 mb-1">Nombre</p>
-                        <input id="nameuser"
+                        <input id="nameuser" name="nombre"
                             class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
                             type="text">
                     </label>
@@ -68,23 +68,23 @@
                         <p class="ml-2 mb-1">Descripción</p>
                         <textarea
                             class="resize-none h-20 placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
-                            name="" id=""></textarea>
+                            name="descripcion" id=""></textarea>
                     </label>
                     <div class="mb-6 flex items-center justify-center">
                         <label data-aos="zoom-in" class="w-1/2 mr-1" for="">
                             <p class="ml-2 mb-1">Correo</p>
-                            <input
+                            <input name="correo"
                                 class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
                                 type="text">
                         </label>
                         <label data-aos="zoom-in" class="w-1/2 ml-1" for="">
                             <p class="ml-2 mb-1">Universidad</p>
-                            <input
+                            <input name="universidad_id"
                                 class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
                                 type="text">
                         </label>
                     </div>
-                    <button type="button"
+                    <button type="submit"
                         class="transform hover:scale-105 duration-300 mt-6 py-2 w-1/2 bg-orange-600 text-white rounded-xl hover:bg-black">Guardar</button>
                 </form>
             </article>
@@ -92,6 +92,7 @@
     </main>
     <!-- AOS libreria -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../api/mesa/crearmesa.js" type="module"></script>
 
     <script>
         AOS.init();

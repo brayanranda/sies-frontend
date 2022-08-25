@@ -49,10 +49,11 @@
             <article class="w-full md:w-3/4 bg-gray-100 md:ml-6 rounded-3xl py-12 px-12">
                 <div class="flex items-center justify-between mb-10">
                     <h1 class="text-xl font-semibold">Noticias</h1>
-                    <button data-aos="zoom-in" type="button" class="py-2 px-4 bg-orange-600 text-white rounded-xl transform hover:scale-105 duration-300 hover:bg-black">Agregar
-                        noticia</button>
+                    <!-- <button data-aos="zoom-in" type="button" class="py-2 px-4 bg-orange-600 text-white rounded-xl transform hover:scale-105 duration-300 hover:bg-black">Agregar
+                        noticia</button> -->
                 </div>
                 <form class="w-full" action="">
+                    <input type="hidden" id="idNoticia" name="id">
                     <label data-aos="zoom-in" class="mb-6 flex flex-col w-full" for="nameuser">
                         <p class="ml-2 mb-1">Título</p>
                         <input id="titulo" name="titulo"
@@ -83,7 +84,7 @@
                     <div class="mb-6 flex items-center justify-center">
                         <label data-aos="zoom-in" class="w-1/2 mr-1" for="">
                             <p class="ml-2 mb-1">Mesa</p>
-                            <input input="mesa_id" name="mesa_id"
+                            <input id="mesa_id" name="mesa_id"
                                 class="placeholder-indigo-400 p-3 bg-gray-200 appearance-none border border-transparent w-full text-indigo-700 leading-tight focus:outline-none focus:bg-white focus:border-gray-600 border-indigo-600 rounded-xl"
                                 type="text">
                         </label>
@@ -95,7 +96,7 @@
     </main>
     <!-- AOS libreria -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="../api/noticia/crearnoticia.js" type="module"></script>
+    <script src="../api/noticia/edit-noticia.js" type="module"></script>
     <script>
         AOS.init();
     </script>
