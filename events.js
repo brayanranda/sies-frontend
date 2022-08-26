@@ -29,7 +29,6 @@ const get = () => {
             `;
       });
       return (HTMLResponse.innerHTML = tpl);
-      console.log(json);
     })
     .catch((err) => console.log(err));
 };

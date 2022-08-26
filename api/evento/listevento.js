@@ -7,10 +7,9 @@ export const get = () => {
       json.map(function (evento) {
         tpl += `<tr class="py-2">
         <td class="p-2">${evento.nombre}</td>
-        <td class="p-2">[${evento.fechaInicio.split("T")[0]}] <br> [${
-          evento.fechaFin.split("T")[0]
-        }]</td>
-        <td class="p-2">${evento.descripcion}</td>
+        <td class="p-2">${evento.descripcion}</br><b>Fecha inicio: </b>${
+          evento.fechaInicio.split("T")[0]
+        }</br><b>Fecha fin:</b> ${evento.fechaFin.split("T")[0]}</td>
         <td class="p-2">${evento.lugar}</td>
         <td class="p-2">${evento.responsable}</td>
         <td class="p-2">${evento.contacto}</td>

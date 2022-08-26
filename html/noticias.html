@@ -45,10 +45,6 @@
                     <a class="flex w-4/5 mx-auto justify-center h-auto md:hover:underline p-2 md:p-0"
                         href="noticias.html">Noticias</a>
                 </li>
-                <li
-                    class="duration-300 hover:bg-indigo-400 md:hover:bg-transparent bg-white md:bg-transparent text-white md:text-white md:ml-10">
-                    <a class="flex w-4/5 mx-auto justify-center h-auto md:hover:underline p-2 md:p-0" href="">Mesas</a>
-                </li>
             </ul>
         </nav>
     </header>
@@ -69,84 +65,13 @@
         </article>
     </section>
 
-    <section class="w-full bg-gray-200 ">
-        <figure class="flex flex-col-reverse md:flex-row items-center justify-between">
-            <figcaption data-aos="zoom-in" class="w-full md:w-1/2 py-12 md:py-0 ">
-                <div class="mx-auto w-4/5 md:w-7/12  ">
-                    <h1 class="text-2xl md:text-3xl mb-4 md:mb-6 ">Noticias Lorem ipsum</h1>
-                    <p class="text-justify">
-                        El Lorem Ipsum fue concebido como un texto de relleno,
-                        formateado de una cierta manera para permitir la presentación de elementos grácos en documentos,
-                        sin necesidad
-                        de una copia formal. El uso de Lorem Ipsum permite a los
-                        diseñadores reunir los diseños y la forma del contenido
-                        antes de que el contenido se haya creado, dando al diseño
-                        y al proceso de producción más libertad
-                        <br>
-                        <a class="" href="http://"> Leer mas </a>
-                    </p>
-                </div>
-            </figcaption>
+    <section class="w-full py-12" style="min-height: 500px">
+        <article id="noticias" data-aos="zoom-in"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-4/5 mx-auto">
 
-            <img data-aos="fade-left" class="w-full md:w-1/2 object-center object-cover h-80 md:h-96"
-                src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                alt="">
-
-        </figure>
-    </section>
-
-    <section class="w-full py-12">
-        <article class="w-full md:w-4/5 mx-auto md:flex items-center justify-between">
-            <figure data-aos="fade-right" class="w-full md:w-1/2">
-                <img class="rounded-3xl mx-auto w-4/5 mb-6 md:mb-0"
-                    src="https://images.unsplash.com/photo-1461280360983-bd93eaa5051b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                    alt="">
-            </figure>
-            <figcaption data-aos="zoom-in" class="w-full md:w-1/2">
-                <div class="mx-auto w-4/5">
-                    <h1 class="text-2xl md:text-3xl mb-4 md:mb-6">¿Noticias Lorem ipsum?</h1>
-                    <p class="text-justify">
-                        El Lorem Ipsum fue concebido como un texto de relleno,
-                        formateado de una cierta manera para permitir la presentación de elementos grácos en documentos,
-                        sin necesidad
-                        de una copia formal. El uso de Lorem Ipsum permite a los
-                        diseñadores reunir los diseños y la forma del contenido
-                        antes de que el contenido se haya creado, dando al diseño
-                        y al proceso de producción más libertad
-                        <br>
-                        <a class="" href="http://"> Leer mas </a>
-                    </p>
-                </div>
-            </figcaption>
         </article>
     </section>
 
-    <section class="w-full bg-gray-200 ">
-        <figure class="flex flex-col-reverse md:flex-row items-center justify-between">
-            <figcaption data-aos="zoom-in" class="w-full md:w-1/2 py-12 md:py-0 ">
-                <div class="mx-auto w-4/5 md:w-7/12  ">
-                    <h1 class="text-2xl md:text-3xl mb-4 md:mb-6 ">Noticias Lorem ipsum</h1>
-                    <p class="text-justify">
-                        El Lorem Ipsum fue concebido como un texto de relleno,
-                        formateado de una cierta manera para permitir la presentación de elementos grácos en documentos,
-                        sin necesidad
-                        de una copia formal. El uso de Lorem Ipsum permite a los
-                        diseñadores reunir los diseños y la forma del contenido
-                        antes de que el contenido se haya creado, dando al diseño
-                        y al proceso de producción más libertad
-                        <br>
-                        <a class="" href="http://"> Leer mas </a>
-                    </p>
-
-                </div>
-            </figcaption>
-
-            <img data-aos="fade-left" class="w-full md:w-1/2 object-center object-cover h-80 md:h-96"
-                src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                alt="">
-
-        </figure>
-    </section>
     <footer>
         <div class="first-section">
             <div class="logo-social">
@@ -201,6 +126,7 @@
     </script>
     <!-- AOS libreria -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../noticia.js" type="module"></script>
 
     <script>
         AOS.init();
